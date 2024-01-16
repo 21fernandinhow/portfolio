@@ -1,0 +1,29 @@
+#about{
+    text-align: start;
+    h2{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    h4{
+        align-self: flex-start;
+        margin: 10px 0px;
+    }
+    p{
+        font-size: 0.9em;
+    }
+    .skills{
+        p{
+            display: inline-flex;
+            margin: 0px 5px 10px 0px;
+            padding: 5px;
+            background-color: var(--secondary-color);
+            border-radius: 7px;
+            font-weight: bolder;
+            &:hover{
+                background-color: var(--contrast-color);
+                color: var(--secondary-color);
+                transition: 0.3s;
+            }
+        }
+    }
+}

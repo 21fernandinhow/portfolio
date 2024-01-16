@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+header, main, footer {
+  margin: 1em;
+  text-align: center; }
+
+header h2 {
+  color: var(--secondary-color); }
+header .icons a, header .icons button {
+  margin: 0px 6px;
+  opacity: 0.8; }
+  header .icons a:hover, header .icons button:hover {
+    text-shadow: 0px 0px 3px var(--contrast-color);
+    opacity: 1;
+    transition: 0.4s; }
+header .icons a {
+  text-decoration: none;
+  color: var(--contrast-color);
+  font-size: 1.5em; }
+header .icons button {
+  border: none;
+  border-radius: 10px;
+  background: var(--contrast-color);
+  color: var(--bg-color);
+  padding: 3px 7px; }
+
+main {
+  flex-direction: column;
+  height: 60vh;
+  width: 90vw;
+  padding: 1.5em;
+  animation: slideIn 1s forwards;
+  transform-origin: center;
+  opacity: 0; }
+
+footer, .page-container {
+  background-color: var(--primary-color);
+  border-radius: 40px;
+  box-shadow: 1px 1px 2px rgba(var(--contrast-color), 0.2); }
+
+footer {
+  width: 90vw;
+  padding: 1em 2em; }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none; }
+    footer ul li {
+      margin: 5px;
+      font-size: 0.9em; }
+      footer ul li a {
+        color: var(--contrast-color);
+        font-weight: bolder;
+        opacity: 0.8;
+        text-decoration: none;
+        position: relative; }
+        footer ul li a:hover {
+          opacity: 1;
+          text-shadow: 0px 0px 1px var(--contrast-color);
+          transition: 0.4s; }
+          footer ul li a:hover .tooltip {
+            display: inline-block; }
+
+@media (min-width: 769px) {
+  #about .overflow {
+    max-width: 700px; }
+
+  #projects .carousel .carousel-item {
+    max-width: 600px; }
+
+  main, footer {
+    max-width: 60vw; } }
+@keyframes border {
+  0% {
+    padding: 8px; }
+  50% {
+    padding: 24px; }
+  100% {
+    padding: 8px; } }
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+#home {
+  animation: zoomIn 1s forwards; }
+  #home .border {
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    animation: border 4s ease-in-out infinite; }
+    #home .border .avatar {
+      border-radius: 100%;
+      background-color: var(--secondary-color); }
+
+#about {
+  text-align: start; }
+  #about h2 {
+    margin-bottom: 10px;
+    text-align: center; }
+  #about h4 {
+    align-self: flex-start;
+    margin: 10px 0px; }
+  #about p {
+    font-size: 0.9em; }
+  #about .skills p {
+    display: inline-flex;
+    margin: 0px 5px 10px 0px;
+    padding: 5px;
+    background-color: var(--secondary-color);
+    border-radius: 7px;
+    font-weight: bolder; }
+    #about .skills p:hover {
+      background-color: var(--contrast-color);
+      color: var(--secondary-color);
+      transition: 0.3s; }
+
+#projects {
+  justify-content: flex-start; }
+  #projects h2 {
+    margin-bottom: 10px; }
+  #projects .carousel {
+    margin-top: 15px;
+    min-height: 35vh; }
+    #projects .carousel .carousel-item img {
+      max-width: 100%;
+      height: auto;
+      object-fit: fill;
+      border-radius: 10px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); }
+      #projects .carousel .carousel-item img:hover {
+        box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.6);
+        transition: 0.2s; }
+    #projects .carousel .carousel-item p {
+      max-width: 100%; }
+    #projects .carousel button {
+      padding: 5px 8px;
+      margin: 7px;
+      border: none;
+      background-color: var(--contrast-color);
+      color: var(--bg-color);
+      font-weight: bold;
+      border-radius: 100%; }
+      #projects .carousel button:hover {
+        box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.6);
+        transition: 0.2s; }
+
+#contact h2 {
+  margin-bottom: 10px; }
+#contact form {
+  flex-direction: column;
+  padding: 1em; }
+  #contact form input, #contact form textarea, #contact form button {
+    padding: 12px 24px;
+    border-radius: 20px; }
+  #contact form input, #contact form textarea {
+    margin: 0.5em;
+    width: 100%;
+    background-color: rgba(100, 100, 200, 0.2);
+    color: var(--contrast-color);
+    border: none; }
+    #contact form input::placeholder, #contact form textarea::placeholder {
+      color: var(--contrast-color);
+      opacity: 0.8; }
+    #contact form input:focus, #contact form textarea:focus {
+      outline: none; }
+  #contact form button {
+    background: var(--bg-color);
+    border: none;
+    color: var(--contrast-color);
+    font-weight: bolder;
+    margin-top: 10px; }
+    #contact form button:hover {
+      padding: 12px 48px;
+      transition: 0.4s; }
+
+:root {
+  --bg-color: #CDF5FD;
+  --primary-color: #A0E9FF;
+  --secondary-color: #00A9FF;
+  --contrast-color: #1A1A2E; }
+
+.flex-central, header .icons, main, #home .border, #projects .carousel, #contact form, body {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--contrast-color);
+  background-color: var(--bg-color); }
+
+body, .overflow {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--contrast-color); }
+
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  background: var(--primary-color); }
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--contrast-color);
+  border-radius: 20px;
+  border: 1px solid var(--primary-color); }
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--contrast-color); }
+
+.overflow {
+  overflow-y: auto;
+  padding-right: 5px; }
+
+button {
+  cursor: pointer; }
+
+textarea {
+  resize: none; }
+
+.tooltip {
+  display: none;
+  position: absolute;
+  left: -1.5em;
+  bottom: 1.7em;
+  background-color: var(--contrast-color);
+  color: var(--bg-color);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); }
+
+/*# sourceMappingURL=style.css.map */

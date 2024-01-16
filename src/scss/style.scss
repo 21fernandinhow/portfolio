@@ -1,0 +1,82 @@
+//Imports
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import './template/layout.scss';
+@import './template/responsivity.scss';
+@import './template/animations.scss';
+@import './pages/home.scss';
+@import './pages/about.scss';
+@import './pages/projects.scss';
+@import './pages/contact.scss';
+
+//Colors
+:root{
+    --bg-color: #CDF5FD;
+    --primary-color: #A0E9FF;
+    --secondary-color: #00A9FF;
+    --contrast-color: #1A1A2E;
+}
+
+//Extends
+.flex-central{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//General Itens
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+} 
+body{
+    @extend .flex-central;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--contrast-color);
+    background-color: var(--bg-color);
+}
+body, .overflow{
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--contrast-color);
+}
+::-webkit-scrollbar{
+    width: 12px;             
+}
+::-webkit-scrollbar-track{
+    background: var(--primary-color);
+}  
+::-webkit-scrollbar-thumb{
+    background-color: var(--contrast-color);    
+    border-radius: 20px;      
+    border: 1px solid var(--primary-color); 
+}
+::selection{
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+}
+.overflow{
+    overflow-y: auto;
+    padding-right: 5px;
+}
+button{
+    cursor: pointer;
+}
+textarea{
+    resize: none;
+}
+.tooltip{
+    display: none;
+    position: absolute;
+    left: -1.5em;
+    bottom: 1.7em;
+    background-color: var(--contrast-color);
+    color: var(--bg-color);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
+}

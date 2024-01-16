@@ -1,0 +1,17 @@
+@media (min-width: 769px) {
+    #about{
+        .overflow{
+            max-width: 700px;
+        }
+    }
+    #projects{
+        .carousel{
+            .carousel-item{
+                max-width: 600px;
+            }
+        }
+    }
+    main, footer{
+        max-width: 60vw;
+    }
+}

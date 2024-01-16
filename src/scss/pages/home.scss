@@ -1,0 +1,13 @@
+#home{
+    animation: zoomIn 1s forwards;
+    .border{
+        border-radius: 100%;
+        background-color: var(--primary-color);
+        @extend .flex-central;
+        animation: border 4s ease-in-out infinite;
+        .avatar{
+            border-radius: 100%;
+            background-color: var(--secondary-color);
+        }
+    }
+}

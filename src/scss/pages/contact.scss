@@ -1,0 +1,39 @@
+#contact{
+    h2{
+        margin-bottom: 10px;
+    }
+    form{
+        @extend .flex-central;
+        flex-direction: column;
+        padding: 1em;
+        input, textarea, button{
+            padding: 12px 24px;
+            border-radius: 20px;
+        }
+        input, textarea{
+            margin: 0.5em;
+            width: 100%;
+            background-color: rgba(100,100,200, 0.2);
+            color: var(--contrast-color);
+            border: none;
+            &::placeholder{
+                color: var(--contrast-color);
+                opacity: 0.8;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            background: var(--bg-color);
+            border: none;
+            color: var(--contrast-color);
+            font-weight: bolder;
+            margin-top: 10px;
+            &:hover{
+                padding: 12px 48px;
+                transition: 0.4s;
+            }
+        }
+    }
+}
