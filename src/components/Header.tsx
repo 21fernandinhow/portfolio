@@ -3,6 +3,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import ThemeButton from "./ThemeButton";
 
 export default function Header() {
+
     return (
       <header>
 

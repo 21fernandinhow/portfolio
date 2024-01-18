@@ -1,27 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun, faRepeat } from "@fortawesome/free-solid-svg-icons";
 
 export default function ThemeButton() {
 
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
 
     const handleTheme = () => {
-
-        if(theme==='light'){
-            document.body.style.setProperty("--bg-color", "#1A1A2E");
-            document.body.style.setProperty("--primary-color", "#1D2D50");
-            document.body.style.setProperty("--secondary-color", "#27496D");
-            document.body.style.setProperty("--contrast-color", "#CDF5FD");
-            setTheme('dark')
-        } else {
-            document.body.style.setProperty("--bg-color", "#CDF5FD");
-            document.body.style.setProperty("--primary-color", "#A0E9FF");
-            document.body.style.setProperty("--secondary-color", "#00A9FF");
-            document.body.style.setProperty("--contrast-color", "#1A1A2E");
-            setTheme('light')
-        }
+        localStorage.setItem('theme', theme === 'dark' ? 'light' : 'dark')
+        setTheme(localStorage.getItem('theme'))
+        applyTheme()
     }
+
+    const applyTheme = () => {
+        document.body.style.setProperty("--bg-color", localStorage.getItem('theme') === 'dark' ? "#1A1A2E" : "#CDF5FD");
+        document.body.style.setProperty("--primary-color", localStorage.getItem('theme') === 'dark' ? "#1D2D50" : "#A0E9FF");
+        document.body.style.setProperty("--secondary-color", localStorage.getItem('theme') === 'dark' ? "#27496D" : "#00A9FF");
+        document.body.style.setProperty("--contrast-color", localStorage.getItem('theme') === 'dark' ? "#CDF5FD" : "#1A1A2E");
+    }
+
+    useEffect(()=>{
+        applyTheme()
+    },[])
 
     return(
         <button onClick={handleTheme} className="theme-btn">
