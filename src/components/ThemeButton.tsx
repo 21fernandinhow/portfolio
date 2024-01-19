@@ -4,27 +4,28 @@ import { faMoon, faSun, faRepeat } from "@fortawesome/free-solid-svg-icons";
 
 export default function ThemeButton() {
 
-    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? `${localStorage.getItem('theme')}` : 'light')
 
-    const handleTheme = () => {
-        localStorage.setItem('theme', theme === 'dark' ? 'light' : 'dark')
-        setTheme(localStorage.getItem('theme'))
-        applyTheme()
+    const handleTheme = (currentTheme: string) => {
+        const userNewTheme = currentTheme === 'dark' ? 'light' : 'dark'
+        localStorage.setItem('theme', userNewTheme)
+        setTheme(userNewTheme)
     }
 
-    const applyTheme = () => {
-        document.body.style.setProperty("--bg-color", localStorage.getItem('theme') === 'dark' ? "#1A1A2E" : "#CDF5FD");
-        document.body.style.setProperty("--primary-color", localStorage.getItem('theme') === 'dark' ? "#1D2D50" : "#A0E9FF");
-        document.body.style.setProperty("--secondary-color", localStorage.getItem('theme') === 'dark' ? "#27496D" : "#00A9FF");
-        document.body.style.setProperty("--contrast-color", localStorage.getItem('theme') === 'dark' ? "#CDF5FD" : "#1A1A2E");
+    const applyTheme = (theme : string) => {
+        const isThemeDark = theme === 'dark'
+        document.body.style.setProperty("--bg-color", isThemeDark ? "#1A1A2E" : "#CDF5FD");
+        document.body.style.setProperty("--primary-color", isThemeDark ? "#1D2D50" : "#A0E9FF");
+        document.body.style.setProperty("--secondary-color", isThemeDark ? "#27496D" : "#00A9FF");
+        document.body.style.setProperty("--contrast-color", isThemeDark ? "#CDF5FD" : "#1A1A2E");
     }
 
     useEffect(()=>{
-        applyTheme()
-    },[])
+        applyTheme(theme)
+    },[theme])
 
     return(
-        <button onClick={handleTheme} className="theme-btn">
+        <button onClick={()=>handleTheme(theme)} className="theme-btn">
             {
                 theme === 'dark' ? 
                 <><FontAwesomeIcon icon={faMoon}/>   <FontAwesomeIcon icon={faRepeat}/>   <FontAwesomeIcon icon={faSun}/></> 
