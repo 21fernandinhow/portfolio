@@ -24,11 +24,15 @@ header{
             font-size: 1.5em;
         }
         button{
+            display: flex;
             border: none;
             border-radius: 10px;
             background: var(--contrast-color);
             color: var(--bg-color);
-            padding: 3px 7px;
+            padding: 3px 6px;
+            svg{
+                margin: 1px 2px;
+            }
         }
     }
 }
