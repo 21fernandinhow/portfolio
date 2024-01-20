@@ -7,10 +7,10 @@ export default function Footer() {
     return (
       <footer>
         <ul>
-            <li><Link to={'/'}><FontAwesomeIcon icon={faHouse} /> <span className="tooltip">Home</span></Link></li>
-            <li><Link to={'/about'}><FontAwesomeIcon icon={faAddressCard} /> <span className="tooltip">About</span></Link></li>
-            <li><Link to={'/projects'}><FontAwesomeIcon icon={faCode}/> <span className="tooltip">Projects</span></Link></li>
-            <li><Link to={'/contact'}><FontAwesomeIcon icon={faEnvelope} /> <span className="tooltip">Contact</span></Link></li>
+            <li><Link to={'/'} aria-label="Home"><FontAwesomeIcon icon={faHouse} /> <span className="tooltip">Home</span></Link></li>
+            <li><Link to={'/about'} aria-label="About"><FontAwesomeIcon icon={faAddressCard} /> <span className="tooltip">About</span></Link></li>
+            <li><Link to={'/projects'} aria-label="Projects"><FontAwesomeIcon icon={faCode}/> <span className="tooltip">Projects</span></Link></li>
+            <li><Link to={'/contact'} aria-label="Contact"><FontAwesomeIcon icon={faEnvelope} /> <span className="tooltip">Contact</span></Link></li>
         </ul>
       </footer>
     )

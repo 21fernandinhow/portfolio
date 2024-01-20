@@ -47,13 +47,13 @@ export default function ProjectsCarrousel() {
     
   return (
     <div className="carousel">
-      <button onClick={previousProject}><FontAwesomeIcon icon={faChevronLeft}/></button>
+      <button onClick={previousProject} aria-label="Previous project"><FontAwesomeIcon icon={faChevronLeft}/></button>
       <ProjectItem 
         url={projects[projectIndex].url}
         img={projects[projectIndex].img}
         description={projects[projectIndex].description}
       />
-      <button onClick={nextProject}><FontAwesomeIcon icon={faChevronRight} /></button>
+      <button onClick={nextProject} aria-label="Next project"><FontAwesomeIcon icon={faChevronRight} /></button>
     </div>
   )
 

@@ -27,7 +27,7 @@ export default function ThemeButton() {
     },[theme])
 
     return(
-        <button onClick={()=>handleTheme(theme)} className={reverseOrder}>
+        <button onClick={()=>handleTheme(theme)} className={reverseOrder} aria-label="Change dark / light theme">
             <FontAwesomeIcon icon={faSun} className="icon"/>
             <FontAwesomeIcon icon={faRepeat} className="icon"/>
             <FontAwesomeIcon icon={faMoon} className="icon"/> 
