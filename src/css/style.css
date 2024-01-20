@@ -128,6 +128,8 @@ footer ul li a:hover .tooltip {
 #home .border .avatar {
   border-radius: 100%;
   background-color: var(--secondary-color);
+  width: 200px;
+  height: 200px;
 }
 
 #about {
@@ -233,6 +235,20 @@ footer ul li a:hover .tooltip {
   transition: 0.4s;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("open-sans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("open-sans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700; /* Use 700 para bold */
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --bg-color: #CDF5FD;
   --primary-color: #A0E9FF;
