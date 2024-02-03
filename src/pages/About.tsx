@@ -18,7 +18,7 @@ export default function About() {
           for a lot of clients, and even started some business. Today, I work for a amazing startup called Nvoip, where I'm allways learning 
           a lot and improving my skills!` 
           : 
-          `Eu sou um Desenvolvedor Fullstack brazileiro com uma longa história de empreendedorismo. Como freelancer, já criei websites e 
+          `Eu sou um Desenvolvedor Fullstack brasileiro com uma longa história de empreendedorismo. Como freelancer, já criei websites e 
           webaplicações para diversos clientes, e até iniciei alguns empreendimentos. Hoje em dia, eu trabalho para uma startup incrível
           chamada Nvoip, onde estou sempre aprendendo e aperfeiçoando minhas habilidades` }
         </p>
