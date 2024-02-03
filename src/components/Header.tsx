@@ -1,25 +1,32 @@
+import { useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import ThemeButton from "./ThemeButton";
+import TranslateButton from "./TranslateButton";
 
 export default function Header() {
 
-    return (
-      <header>
+  const { language } = useContext(LanguageContext)
+  const isEnglish = language === "en"
 
-        <h1>Fernando Carvalho</h1>
-        <h2>FullStack Developer</h2>
+  return (
+    <header>
 
-        <div className="icons">
-          <a href="https://github.com/21fernandinhow" target="_blank" rel="noopener noreferrer" aria-label="Github">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-          <a href="https://www.linkedin.com/in/fernando-carvalho-6005b024b/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <ThemeButton/>
-        </div>
+      <h1>Fernando Carvalho</h1>
+      <h2>{ isEnglish ? "FullStack Developer" : "Desenvolvedor FullStack"}</h2>
 
-      </header>
-    )
+      <div className="icons">
+        <a href="https://github.com/21fernandinhow" target="_blank" rel="noopener noreferrer" aria-label="Github">
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+        <a href="https://www.linkedin.com/in/fernando-carvalho-6005b024b/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+        <ThemeButton/>
+        <TranslateButton/>
+      </div>
+
+    </header>
+  )
 }

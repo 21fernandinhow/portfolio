@@ -1,29 +1,40 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { LanguageContext } from "../contexts/LanguageContext"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import ProjectItem from "./ProjectItem"
 
 export default function ProjectsCarrousel() {
 
+  const { language } = useContext(LanguageContext)
   const [projectIndex, setProjectIndex] = useState(0)
+  const isEnglish = language === "en"
   const projects = [
     {
-      description: `A Typescript Fullstack financial blog that automatically generates content every monday using A.I with cron jobs`,
+      description: isEnglish ? 
+      "A Typescript Fullstack financial blog that automatically generates content every tuersday using A.I with cron jobs" 
+      : "Um blog de finanças fullstack em typescript que gera conteúdo automaticamente todas as terças-feiras com IA e cron jobs",
       img: "/bolsocheioai.webp",
       url: "https://bolsocheio.ai"
     },
     {
-      description: `A video content platform made for Codi Academy using ReactJs`,
+      description: isEnglish ? 
+      "A video content platform made for Codi Academy using Youtube API and ReactJs"
+      : "A plataforma de video oficial da Codi Academy usando a API do Youtube e ReactJS",
       img: "/codiverso.webp",
       url: "https://codiacademy.com/codiverso/"
     },
     {
-      description: `A Crypto Converter made with ReactJs`,
+      description: isEnglish ? 
+      "A cripto converter made with Mercado Pago API and ReactJs"
+      : "Um conversor de criptomoedas feito com a API do Mercado Pago e ReactJs",
       img: "/crypto.webp",
       url: "https://welcometocryptoconverter.netlify.app/"
     },
     {
-      description: "How many days are left to the next FIFA World Cup",
+      description: isEnglish ? 
+      "How Many Days Left to World Cup"
+      : "Contador de quanto falta para a copa",
       img: "/worldcup.webp",
       url: "https://quantofaltapracopa.netlify.app/"
     }
