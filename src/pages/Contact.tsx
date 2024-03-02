@@ -12,7 +12,7 @@ export default function Contact() {
         
         <h2>{isEnglish ? "Contact" : "Contato"}</h2>
         <p>{isEnglish ? "Send me a message on the form bellow" : "Me envie uma mensagem através do formulário abaixo:"}</p>
-        <form action="https://formsubmit.co/21fernandinhow@gmail.com" method="POST">
+        <form action="https://formsubmit.co/contato@fernandocarvalhodev.com" method="POST">
               <input type="text" name="name" id="name" placeholder={isEnglish ? "Name: " : "Nome: "} required/>
               <input type="email" name="email" id="email" placeholder="E-mail: " required/>
               <textarea id="message" name="message" rows={3} placeholder={isEnglish ? "Message" : "Mensagem"}  required/>
