@@ -16,11 +16,11 @@ export default function About() {
           {isEnglish ? 
           `I'm a brazillian FullStack Developer with a long entrepreunership story. As a freelancer, I've done webapplications and websites 
           for a lot of clients, and even started some business. Today, I work for a amazing startup called Nvoip, where I'm allways learning 
-          a lot and improving my skills!` 
+          a lot and improving my skills, allways looking for challenges!` 
           : 
           `Eu sou um Desenvolvedor Fullstack brasileiro com uma longa história de empreendedorismo. Como freelancer, já criei websites e 
           webaplicações para diversos clientes, e até iniciei alguns empreendimentos. Hoje em dia, eu trabalho para uma startup incrível
-          chamada Nvoip, onde estou sempre aprendendo e aperfeiçoando minhas habilidades` }
+          chamada Nvoip, onde estou sempre aprendendo e aperfeiçoando minhas habilidades, sempre em busca de desafios!` }
         </p>
 
         <h4>{isEnglish ? "Skills" : "Habilidades"}</h4>
