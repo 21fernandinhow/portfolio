@@ -19,10 +19,10 @@ export default function ProjectsCarrousel() {
     },
     {
       description: isEnglish ? 
-      "A video content platform made for Codi Academy using Youtube API and ReactJs"
-      : "A plataforma de video oficial da Codi Academy usando a API do Youtube e ReactJS",
-      img: "/codiverso.webp",
-      url: "https://codiacademy.com/codiverso/"
+      "A institutional page for a ONG called 'NOSSA ONG' made with ReactJs"
+      : "Página institucional da ONG 'Nossa ONG' feita com ReactJS",
+      img: "/nossaong.webp",
+      url: "https://nossaong.com.br/"
     },
     {
       description: isEnglish ? 
