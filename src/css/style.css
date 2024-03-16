@@ -34,7 +34,10 @@ header .icons button svg {
 }
 header .icons #translate {
   cursor: pointer;
-  font-size: 1.7em;
+  font-weight: bolder;
+}
+header .icons #translate span {
+  font-size: 0.8em;
 }
 
 main {
@@ -277,11 +280,6 @@ body {
   background-color: var(--bg-color);
 }
 
-body, .overflow {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) var(--contrast-color);
-}
-
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -297,8 +295,8 @@ body, .overflow {
 }
 
 ::selection {
-  background-color: var(--primary-color);
-  color: var(--contrast-color);
+  background-color: var(--contrast-color);
+  color: var(--primary-color);
 }
 
 .overflow {

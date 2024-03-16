@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { faRepeat } from "@fortawesome/free-solid-svg-icons";
 import { LanguageContext } from '../contexts/LanguageContext';
 
 export default function TranslateButton() {
@@ -13,5 +13,9 @@ export default function TranslateButton() {
         setLanguage(userNewTheme)
     }
 
-    return <FontAwesomeIcon icon={faLanguage} id="translate" onClick={()=>handleLanguage(language)} aria-label="Translate Button"/>
+    return(
+        <button onClick={()=>handleLanguage(language)} aria-label="Translate Button" id="translate">
+            A <FontAwesomeIcon icon={faRepeat} className="icon"/> <span>文</span>
+        </button>
+    )
 }

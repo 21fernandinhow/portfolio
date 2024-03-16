@@ -37,7 +37,10 @@ header{
         }
         #translate{
             cursor: pointer;
-            font-size: 1.7em;
+            font-weight: bolder;
+            span{
+                font-size: 0.8em;
+            }
         }
     }
 }
