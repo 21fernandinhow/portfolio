@@ -4,7 +4,7 @@ export default function Home() {
     <main id="home">
 
       <div className="border">
-          <img src="my-avatar.webp" alt="Fernando" width="180px" height="180px" className="avatar" loading="eager"/>
+          <img src="avatar.webp" alt="Fernando" width="180px" height="180px" className="avatar" loading="eager"/>
       </div>
 
     </main>
