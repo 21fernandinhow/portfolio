@@ -1,40 +1,30 @@
-import { useState, useContext } from "react"
-import { LanguageContext } from "../contexts/LanguageContext"
+import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import ProjectItem from "./ProjectItem"
+import { useTranslation } from "../translations/Translate";
 
 export default function ProjectsCarrousel() {
 
-  const { language } = useContext(LanguageContext)
   const [projectIndex, setProjectIndex] = useState(0)
-  const isEnglish = language === "en"
   const projects = [
     {
-      description: isEnglish ? 
-      "A Typescript Fullstack financial blog that automatically generates content every tuersday using A.I with cron jobs" 
-      : "Um blog de finanças fullstack em typescript que gera conteúdo automaticamente todas as terças-feiras com IA e cron jobs",
+      description: useTranslation('projects.project1'),
       img: "/bolsocheioai.webp",
       url: "https://bolsocheio.ai"
     },
     {
-      description: isEnglish ? 
-      "A institutional page for a ONG called 'NOSSA ONG' made with ReactJs"
-      : "Página institucional da ONG 'Nossa ONG' feita com ReactJS",
+      description: useTranslation('projects.project2'),
       img: "/nossaong.webp",
       url: "https://nossaong.com.br/"
     },
     {
-      description: isEnglish ? 
-      "A cripto converter made with Mercado Pago API and ReactJs"
-      : "Um conversor de criptomoedas feito com a API do Mercado Pago e ReactJs",
+      description: useTranslation('projects.project3'),
       img: "/crypto.webp",
       url: "https://welcometocryptoconverter.netlify.app/"
     },
     {
-      description: isEnglish ? 
-      "How Many Days Left to World Cup"
-      : "Contador de quanto falta para a copa",
+      description: useTranslation('projects.project4'),
       img: "/worldcup.webp",
       url: "https://quantofaltapracopa.netlify.app/"
     }

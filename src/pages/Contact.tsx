@@ -1,22 +1,18 @@
-import { useContext } from "react"
-import { LanguageContext } from "../contexts/LanguageContext"
+import { useTranslation } from "../translations/Translate"
 
 export default function Contact() {
-
-  const { language } = useContext(LanguageContext)
-  const isEnglish = language === "en"
 
   return (
     <main className="page-container" id="contact">
       <div className="overflow">
         
-        <h2>{isEnglish ? "Contact" : "Contato"}</h2>
-        <p>{isEnglish ? "Send me a message on the form bellow" : "Me envie uma mensagem através do formulário abaixo:"}</p>
+        <h2>{useTranslation('contact.title')}</h2>
+        <p>{useTranslation('contact.description')}</p>
         <form action="https://formsubmit.co/contato@fernandocarvalhodev.com" method="POST">
-              <input type="text" name="name" id="name" placeholder={isEnglish ? "Name: " : "Nome: "} required/>
+              <input type="text" name="name" id="name" placeholder={useTranslation('contact.name')} required/>
               <input type="email" name="email" id="email" placeholder="E-mail: " required/>
-              <textarea id="message" name="message" rows={3} placeholder={isEnglish ? "Message" : "Mensagem"}  required/>
-              <button type="submit">{isEnglish ? "Send" : "Enviar"}</button>
+              <textarea id="message" name="message" rows={3} placeholder={useTranslation('contact.message')}  required/>
+              <button type="submit">{useTranslation('contact.send')}</button>
         </form>
 
       </div>

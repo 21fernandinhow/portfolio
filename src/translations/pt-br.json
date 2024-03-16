@@ -1,0 +1,25 @@
+{
+    "header":{
+        "title": "Desenvolvedor Fullstack"
+    },
+    "about":{
+        "title": "Sobre",
+        "text": "Eu sou um Desenvolvedor Fullstack brasileiro com uma longa história de empreendedorismo. Como freelancer, já criei websites e webaplicações para diversos clientes, e até iniciei alguns empreendimentos. Hoje em dia, eu trabalho para uma startup incrível chamada Nvoip, onde estou sempre aprendendo e aperfeiçoando minhas habilidades, sempre em busca de desafios!",
+        "skills": "Habilidades:"
+    },
+    "projects":{
+        "title": "Projetos",
+        "description": "Alguns de meus projetos favoritos. Clique na imagem para visitar.",
+        "project1": "Um blog de finanças fullstack em typescript que gera conteúdo automaticamente todas as terças-feiras com IA e cron jobs",
+        "project2": "Página institucional da ONG 'Nossa ONG' feita com ReactJs",
+        "project3": "A cripto converter made with Mercado Pago API and ReactJs",
+        "project4": "Contador de quanto falta para a copa"
+    },
+    "contact":{
+        "title": "Contato",
+        "description": "Me envie uma mensagem através do formulário abaixo:",
+        "name": "Nome",
+        "message": "Mensagem",
+        "send": "Enviar"
+    }
+}
