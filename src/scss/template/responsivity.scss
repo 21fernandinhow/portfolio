@@ -8,6 +8,9 @@
         .carousel{
             .carousel-item{
                 max-width: 600px;
+                img{
+                    max-width: 100%;
+                }
             }
         }
     }
