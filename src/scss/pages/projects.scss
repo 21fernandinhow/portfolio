@@ -9,12 +9,12 @@
         min-height: 35vh;
         .carousel-item{
             img{
-                max-width: 85%;
+                max-width: 80%;
                 height: auto;
                 border-radius: 10px;
-                box-shadow: 0px 2px 4px rgba(0,0,0, 0.4);
+                box-shadow: 0px 2px 4px rgba(0,0,0, 0.5);
                 &:hover{
-                    box-shadow: 0px 0px 6px rgba(255,255,255, 0.6);
+                    box-shadow: 0px 0px 6px var(--shine-color);
                     transition: 0.2s;
                 }
             }
@@ -31,7 +31,7 @@
             font-weight: bold;
             border-radius: 100%;
             &:hover{
-                box-shadow: 0px 0px 6px rgba(255,255,255, 0.6);
+                box-shadow: 0px 0px 6px var(--shine-color);
                 transition: 0.2s;
             }
         }

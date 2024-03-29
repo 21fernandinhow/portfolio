@@ -19,6 +19,7 @@ export default function ThemeButton() {
         document.body.style.setProperty("--primary-color", isThemeDark ? "#1D2D50" : "#A0E9FF");
         document.body.style.setProperty("--secondary-color", isThemeDark ? "#27496D" : "#00A9FF");
         document.body.style.setProperty("--contrast-color", isThemeDark ? "#CDF5FD" : "#1A1A2E");
+        document.body.style.setProperty("--shine-color", isThemeDark ? "rgba(255,255,255, 0.4)" : "rgba(0,0,0, 0.4)");
         setReverseOrder(isThemeDark ? 'reverse-true' : 'reverse-false');
     }
 

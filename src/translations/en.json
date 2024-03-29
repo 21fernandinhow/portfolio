@@ -10,7 +10,7 @@
     "projects":{
         "title": "Projects",
         "description": "Some of my favourite projects. Click on image to visit",
-        "project1": "A Typescript Fullstack financial blog that automatically generates content every tuersday using A.I with cron jobs",
+        "project1": "A Typescript Fullstack blog that automatically generates weekly content using A.I and cron jobs",
         "project2": "A institutional page for a ONG called 'NOSSA ONG' made with ReactJs",
         "project3": "A cripto converter made with Mercado Pago API and ReactJs",
         "project4": "How Many Days Left to World Cup"
