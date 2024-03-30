@@ -12,7 +12,7 @@
         "description": "Alguns de meus projetos favoritos. Clique na imagem para visitar.",
         "project1": "Um blog Fullstack em Typescript que gera conteúdo semanal automaticamente com IA e cron jobs",
         "project2": "Página institucional da ONG 'Nossa ONG' feita com ReactJs",
-        "project3": "Um conversor de criptomoedas feito com a API do Mercado Pago e ReactJs",
+        "project3": "Um conversor de criptomoedas feito com a API do Mercado Pago, Bulma e ReactJs",
         "project4": "Contador de quanto falta para a copa"
     },
     "contact":{
