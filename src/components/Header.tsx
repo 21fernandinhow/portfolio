@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header>
 
-      <h1>Fernando Carvalho</h1>
+      <h1 translate="no">Fernando Carvalho</h1>
       <h2>{useTranslation('header.title')}</h2>
 
       <div className="icons">
