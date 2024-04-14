@@ -8,9 +8,10 @@ export default function TranslateButton() {
     const { language, setLanguage } = useContext(LanguageContext);
 
     const handleLanguage = (currentLanguage: string) => {
-        const userNewTheme = currentLanguage === 'pt-br' ? 'en' : 'pt-br'
-        localStorage.setItem('language', userNewTheme)
-        setLanguage(userNewTheme)
+        const userLang = currentLanguage === 'pt-br' ? 'en' : 'pt-br'
+        localStorage.setItem('language', userLang)
+        setLanguage(userLang)
+        document.documentElement.lang = userLang
     }
 
     return(
