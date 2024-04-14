@@ -14,7 +14,9 @@ export default function Charlie() {
         useTranslation("charlie.infoAbout"),
         useTranslation("charlie.infoPersonal"),
         useTranslation("charlie.infoDoors"),
-        useTranslation("charlie.infoProjects")
+        useTranslation("charlie.infoProjects"),
+        useTranslation("charlie.infoPortfolio"),
+        useTranslation("charlie.infoDate") + new Date
     ].join()
     const apiKey = import.meta.env.VITE_OPENAI_APIKEY;
     const model = "gpt-3.5-turbo"
