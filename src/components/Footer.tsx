@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faHouse, faAddressCard, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faHouse, faAddressCard, faEnvelope, faLightbulb  } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "../translations/Translate";
 
 export default function Footer() {
@@ -34,6 +34,13 @@ export default function Footer() {
             <Link to={'/contact'} aria-label="Contact">
               <FontAwesomeIcon icon={faEnvelope} /> 
               <span className="tooltip">{useTranslation('contact.title')}</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link to={'/charlie'} aria-label="Ask to AI">
+              <FontAwesomeIcon icon={faLightbulb} /> 
+              <span className="tooltip">{useTranslation('charlie.title')}</span>
             </Link>
           </li>
 
