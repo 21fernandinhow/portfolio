@@ -26,7 +26,10 @@ export default function Charlie() {
     const sendMessageToAI = async () => {
 
         try {
-          
+            
+            const userMessage = userText
+            setUserText("")
+
             const response = await fetch('https://api.openai.com/v1/chat/completions', {
                 method: 'POST',
                 headers: {
@@ -35,7 +38,7 @@ export default function Charlie() {
                 },
                 body: JSON.stringify({
                     model: model,
-                    messages: [...messages, { role: "user", content: userText }], // messages
+                    messages: [...messages, { role: "user", content: userMessage }], // messages
                     max_tokens: 300,
                     temperature: 0.5
                 }),
@@ -44,7 +47,7 @@ export default function Charlie() {
             const data = await response.json(); 
             setMessages([
                 ...messages, 
-                { role: "user", content: userText }, 
+                { role: "user", content: userMessage }, 
                 { role: 'assistant', content: data.choices[0].message.content }
             ]);
 
@@ -67,7 +70,7 @@ export default function Charlie() {
             </div>
 
             <div className="user-input">
-                <textarea onChange={(e)=>{setUserText(e.target.value)}} placeholder={useTranslation("charlie.placeholder")}></textarea>
+                <textarea onChange={(e)=>{setUserText(e.target.value)}} placeholder={useTranslation("charlie.placeholder")} value={userText}/>
                 <button onClick={sendMessageToAI}>{useTranslation("contact.send")}</button>
             </div>
         </main>
