@@ -51,6 +51,8 @@ export default function Charlie() {
                 { role: 'assistant', content: data.choices[0].message.content }
             ]);
 
+            setUserText("");
+
         } catch (error) {
             console.error('Erro ao enviar a mensagem:', error);
         }
