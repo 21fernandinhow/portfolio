@@ -21,14 +21,14 @@ export default function Charlie() {
     const apiKey = import.meta.env.VITE_OPENAI_APIKEY;
     const model = "gpt-3.5-turbo"
     const [messages, setMessages] = useState<Message[]>([{role: "system", content: systemMessage}])
-    const [userText, setUserText] = useState("")
+    const [userInputText, setUserInputText] = useState("")
 
     const sendMessageToAI = async () => {
 
         try {
             
-            const userMessage = userText
-            setUserText("")
+            const userMessage = userInputText
+            setUserInputText("")
 
             const response = await fetch('https://api.openai.com/v1/chat/completions', {
                 method: 'POST',
@@ -70,7 +70,7 @@ export default function Charlie() {
             </div>
 
             <div className="user-input">
-                <textarea onChange={(e)=>{setUserText(e.target.value)}} placeholder={useTranslation("charlie.placeholder")} value={userText}/>
+                <textarea onChange={(e)=>{setUserInputText(e.target.value)}} placeholder={useTranslation("charlie.placeholder")} value={userInputText}/>
                 <button onClick={sendMessageToAI}>{useTranslation("contact.send")}</button>
             </div>
         </main>
