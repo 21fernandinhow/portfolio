@@ -50,7 +50,8 @@
         button{
             font-weight: bolder;
             font-size: 0.8em;
-            padding: 8px 16px;
+            min-width: 5.5em;
+            min-height: 2.5em;
             border-radius: 20px;
             background-color: var(--contrast-color);
             color: var(--bg-color);

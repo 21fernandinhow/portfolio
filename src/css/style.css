@@ -86,6 +86,27 @@ footer ul li a:hover .tooltip {
   display: inline-block;
 }
 
+.waiting-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em;
+}
+.waiting-container span {
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+  margin: 0 3px;
+  animation: loading 1s infinite;
+}
+.waiting-container span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.waiting-container span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
 @media (min-width: 769px) {
   #about .overflow {
     max-width: 700px;
@@ -129,6 +150,17 @@ footer ul li a:hover .tooltip {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 #home {
@@ -300,7 +332,8 @@ footer ul li a:hover .tooltip {
 #charlie .user-input button {
   font-weight: bolder;
   font-size: 0.8em;
-  padding: 8px 16px;
+  min-width: 5.5em;
+  min-height: 2.5em;
   border-radius: 20px;
   background-color: var(--contrast-color);
   color: var(--bg-color);

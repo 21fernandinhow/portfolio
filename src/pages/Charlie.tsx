@@ -1,3 +1,4 @@
+import WaitingAnimation from "../components/WaitingMessage";
 import { useTranslation } from "../translations/Translate"
 import { useState } from "react"
 
@@ -22,8 +23,11 @@ export default function Charlie() {
     const model = "gpt-3.5-turbo"
     const [messages, setMessages] = useState<Message[]>([{role: "system", content: systemMessage}])
     const [userInputText, setUserInputText] = useState("")
+    const [isWaitingMessage, setIsWaitingMessage] = useState(false)
 
     const sendMessageToAI = async () => {
+
+        setIsWaitingMessage(true)
 
         try {
             
@@ -54,6 +58,8 @@ export default function Charlie() {
         } catch (error) {
             console.error('Erro ao enviar a mensagem:', error);
         }
+
+        setIsWaitingMessage(false)
     }
 
     return (
@@ -70,8 +76,14 @@ export default function Charlie() {
             </div>
 
             <div className="user-input">
-                <textarea onChange={(e)=>{setUserInputText(e.target.value)}} placeholder={useTranslation("charlie.placeholder")} value={userInputText}/>
-                <button onClick={sendMessageToAI}>{useTranslation("contact.send")}</button>
+                <textarea 
+                    onChange={(e)=>{setUserInputText(e.target.value)}} 
+                    placeholder={useTranslation("charlie.placeholder")} 
+                    value={userInputText}
+                />
+                <button onClick={sendMessageToAI} disabled={isWaitingMessage}>
+                    {isWaitingMessage ? <WaitingAnimation/> : useTranslation("contact.send")}
+                </button>
             </div>
         </main>
     )
