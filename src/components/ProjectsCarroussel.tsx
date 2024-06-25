@@ -10,7 +10,7 @@ export default function ProjectsCarrousel() {
   const projects = [
     {
       description: useTranslation('projects.project1'),
-      img: "/bolsocheioai.webp",
+      img: "/bolsocheio.webp",
       url: "https://bolsocheio.ai"
     },
     {
