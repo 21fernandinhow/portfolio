@@ -10,10 +10,11 @@
 
 //Colors
 :root{
-    --bg-color: #CDF5FD;
-    --primary-color: #A0E9FF;
-    --secondary-color: #00A9FF;
-    --contrast-color: #1A1A2E;
+    --bg-color: #f5f5f5;
+    --primary-color: #dedede;
+    --gradient-first-color: #8c52ff;
+    --gradient-second-color: #5ce1e6; // #ff914d;
+    --contrast-color: #222831;
     --shine-color: rgba(0,0,0, 0.4);
 }
 
@@ -22,6 +23,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.gradient-text{
+    background: linear-gradient(to left, var(--gradient-first-color), var(--gradient-second-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 //General Itens

@@ -5,7 +5,6 @@ header, main, footer{
 
 header{
     h2{
-        color: var(--secondary-color);
         margin-bottom: 2px;
     }
     .icons{
@@ -102,7 +101,7 @@ footer{
       width: 0.4em;
       height: 0.4em;
       border-radius: 100%;
-      background-color: var(--secondary-color);
+      background-color: var(--bg-color);
       margin: 0 3px;
       animation: loading 1s infinite;
   

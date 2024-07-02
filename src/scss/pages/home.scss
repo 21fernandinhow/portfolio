@@ -7,7 +7,7 @@
         animation: border 4s ease-in-out infinite;
         .avatar{
             border-radius: 100%;
-            background-color: var(--secondary-color);
+            background: linear-gradient(to right, var(--gradient-first-color), var(--gradient-second-color));
             width: 180px;
             height: 180px;
         }

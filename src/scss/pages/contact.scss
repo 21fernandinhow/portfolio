@@ -13,7 +13,7 @@
         input, textarea{
             margin: 0.5em;
             width: 100%;
-            background-color: rgba(100,100,200, 0.2);
+            background-color: var(--bg-color);
             color: var(--contrast-color);
             border: none;
             &::placeholder{
@@ -25,9 +25,9 @@
             }
         }
         button{
-            background: var(--bg-color);
+            background: var(--contrast-color);
             border: none;
-            color: var(--contrast-color);
+            color: var(--bg-color);
             font-weight: bolder;
             margin-top: 10px;
             &:hover{

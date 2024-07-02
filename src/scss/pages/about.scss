@@ -16,12 +16,12 @@
             display: inline-flex;
             margin: 0px 5px 10px 0px;
             padding: 5px;
-            background-color: var(--secondary-color);
+            background-color: var(--bg-color);
             border-radius: 7px;
             font-weight: bolder;
             &:hover{
                 background-color: var(--contrast-color);
-                color: var(--secondary-color);
+                color: var(--bg-color);
                 transition: 0.3s;
             }
         }

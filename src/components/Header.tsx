@@ -10,7 +10,7 @@ export default function Header() {
     <header>
 
       <h1 translate="no">Fernando Carvalho</h1>
-      <h2>{useTranslation('header.title')}</h2>
+      <h2 className="gradient-text">{useTranslation('header.title')}</h2>
 
       <div className="icons">
         <a href="https://github.com/21fernandinhow" target="_blank" rel="noopener noreferrer" aria-label="Github">
