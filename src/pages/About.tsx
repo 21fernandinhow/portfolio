@@ -7,7 +7,7 @@ export default function About() {
     <main className="page-container" id="about">
       <div className="overflow">
 
-        <h2>{useTranslation('about.title')}</h2>
+        <h2 className="gradient-text">{useTranslation('about.title')}</h2>
         <p> {useTranslation('about.text')}</p>
 
         <h4>{useTranslation('about.skills')}</h4>

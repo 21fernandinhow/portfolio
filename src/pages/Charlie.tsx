@@ -65,7 +65,7 @@ export default function Charlie() {
     return (
         <main className="page-container" id="charlie">
             <div className="header">
-                <h2>{useTranslation("charlie.title")}</h2>
+                <h2 className="gradient-text">{useTranslation("charlie.title")}</h2>
                 <p>{useTranslation("charlie.description")}</p>
             </div>
 

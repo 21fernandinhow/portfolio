@@ -6,7 +6,7 @@ export default function Contact() {
     <main className="page-container" id="contact">
       <div className="overflow">
         
-        <h2>{useTranslation('contact.title')}</h2>
+        <h2 className="gradient-text">{useTranslation('contact.title')}</h2>
         <p>{useTranslation('contact.description')}</p>
         <form action="https://formsubmit.co/contato@fernandocarvalhodev.com" method="POST">
               <input type="text" name="name" id="name" placeholder={useTranslation('contact.name')} required/>

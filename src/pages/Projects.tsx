@@ -7,7 +7,7 @@ export default function Projects() {
     <main className="page-container" id="projects">
 
       <div className="overflow">
-        <h2>{useTranslation('projects.title')}</h2>
+        <h2 className="gradient-text">{useTranslation('projects.title')}</h2>
         <p>{useTranslation('projects.description')}</p>
         <ProjectsCarrousel/>
       </div>
