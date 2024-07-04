@@ -77,7 +77,10 @@ export default function Charlie() {
 
             <div className="user-input">
                 <textarea 
-                    onChange={(e)=>{setUserInputText(e.target.value)}} 
+                    onChange={(e) => setUserInputText(e.target.value)} 
+                    onKeyDown={(e) => { 
+                        if (e.key === "Enter") sendMessageToAI() 
+                    }}
                     placeholder={useTranslation("charlie.placeholder")} 
                     value={userInputText}
                 />
