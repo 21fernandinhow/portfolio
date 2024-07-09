@@ -4,7 +4,7 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 export default function ThemeButton() {
 
-    const [theme, setTheme] = useState(localStorage.getItem('theme') ? `${localStorage.getItem('theme')}` : 'light')
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? `${localStorage.getItem('theme')}` : 'dark')
 
     const handleTheme = (currentTheme: string) => {
         const userNewTheme = currentTheme === 'dark' ? 'light' : 'dark'
@@ -25,8 +25,8 @@ export default function ThemeButton() {
     },[theme])
 
     return(
-        <button onClick={()=>handleTheme(theme)} aria-label="Change dark / light theme" id="theme-btn">
-            {theme === 'light' ?  <FontAwesomeIcon icon={faMoon} className="icon"/>  : <FontAwesomeIcon icon={faSun} className="icon"/> }
+        <button onClick={()=>handleTheme(theme)} aria-label="Change theme" id="theme-btn">
+            {theme === 'dark' ? <FontAwesomeIcon icon={faSun} className="icon"/> : <FontAwesomeIcon icon={faMoon} className="icon"/>}
         </button>
     )
 }
