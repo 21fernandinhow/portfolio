@@ -13,15 +13,16 @@ export default function ProjectsCarrousel() {
       img: "/bolsocheio.webp",
       url: "https://bolsocheio.ai"
     },
+
     {
       description: useTranslation('projects.project2'),
-      img: "/nossaong.webp",
-      url: "https://nossaong.com.br/"
+      img: "/timemessages.webp",
+      url: "https://timemessages.vercel.app/"
     },
     {
       description: useTranslation('projects.project3'),
-      img: "/crypto.webp",
-      url: "https://welcometocryptoconverter.netlify.app/"
+      img: "/nossaong.webp",
+      url: "https://nossaong.com.br/"
     },
     {
       description: useTranslation('projects.project4'),
