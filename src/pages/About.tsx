@@ -12,7 +12,7 @@ export default function About() {
 
         <h4>{useTranslation('about.skills')}</h4>
         <div className="skills">
-          <p>NextJs</p> <p>ReactJs</p> <p>Typescript</p> <p>Javascript</p> <p>NodeJs</p> <p>Express</p> <p>Ruby</p> <p>Ruby on Rails</p>
+          <p>NextJs</p> <p>ReactJs</p> <p>PreactJs</p> <p>Typescript</p> <p>Javascript</p> <p>NodeJs</p> <p>Express</p> <p>Ruby</p> <p>Ruby on Rails</p>
           <p>MongoDB</p> <p>PostgreSQL</p> <p>SCSS / Sass</p> <p>Bulma</p> <p>MUI Components</p> <p> TailwindCSS</p> <p> Daisy UI</p> 
         </div>
         
