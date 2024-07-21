@@ -1,6 +1,6 @@
 import WaitingAnimation from "../components/WaitingMessage";
 import { useTranslation } from "../translations/Translate"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 interface Message {
     role: string,
@@ -23,15 +23,17 @@ export default function Charlie() {
     const model = "gpt-3.5-turbo"
     const [messages, setMessages] = useState<Message[]>([{role: "system", content: systemMessage}])
     const [userInputText, setUserInputText] = useState("")
-    const [isWaitingMessage, setIsWaitingMessage] = useState(false)
+    const [isWaitingAnswer, setIsWaitingAnswer] = useState(false)
+    const messagesContainerRef = useRef<HTMLDivElement | null>(null);
 
     const sendMessageToAI = async () => {
 
-        setIsWaitingMessage(true)
+        setIsWaitingAnswer(true)
+        const newArrayMessages = [...messages, {role: "user", content: userInputText}]
+        setMessages(newArrayMessages)
 
         try {
             
-            const userMessage = userInputText
             setUserInputText("")
 
             const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -42,7 +44,7 @@ export default function Charlie() {
                 },
                 body: JSON.stringify({
                     model: model,
-                    messages: [...messages, { role: "user", content: userMessage }], // messages
+                    messages: newArrayMessages, // messages
                     max_tokens: 300,
                     temperature: 0.5
                 }),
@@ -50,8 +52,7 @@ export default function Charlie() {
     
             const data = await response.json(); 
             setMessages([
-                ...messages, 
-                { role: "user", content: userMessage }, 
+                ...newArrayMessages, 
                 { role: 'assistant', content: data.choices[0].message.content }
             ]);
 
@@ -59,8 +60,21 @@ export default function Charlie() {
             console.error('Erro ao enviar a mensagem:', error);
         }
 
-        setIsWaitingMessage(false)
+        setIsWaitingAnswer(false)
     }
+
+    const scrollToBottom = () => {
+        if (messagesContainerRef.current) {
+            messagesContainerRef.current.scrollTo({
+                top: messagesContainerRef.current.scrollHeight,
+                behavior: 'smooth',
+            });
+        }
+    };
+    
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages]);
 
     return (
         <main className="page-container" id="charlie">
@@ -69,7 +83,7 @@ export default function Charlie() {
                 <p>{useTranslation("charlie.description")}</p>
             </div>
 
-            <div className="overflow chat">
+            <div className="overflow chat" ref={messagesContainerRef}>
                 {messages.filter((item)=>{return item.role === "user" || item.role === "assistant"}).map((item, index)=>{
                     return <p key={index} className={`chat-message-${item.role}`}>{item.content}</p>
                 })}
@@ -79,13 +93,16 @@ export default function Charlie() {
                 <textarea 
                     onChange={(e) => setUserInputText(e.target.value)} 
                     onKeyDown={(e) => { 
-                        if (e.key === "Enter") sendMessageToAI() 
+                        if (e.key === 'Enter' && !e.shiftKey && !isWaitingAnswer) {
+                            e.preventDefault();
+                            sendMessageToAI() 
+                        }
                     }}
                     placeholder={useTranslation("charlie.placeholder")} 
                     value={userInputText}
                 />
-                <button onClick={sendMessageToAI} disabled={isWaitingMessage}>
-                    {isWaitingMessage ? <WaitingAnimation/> : useTranslation("contact.send")}
+                <button onClick={sendMessageToAI} disabled={isWaitingAnswer}>
+                    {isWaitingAnswer ? <WaitingAnimation/> : useTranslation("contact.send")}
                 </button>
             </div>
         </main>
