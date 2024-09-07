@@ -13,11 +13,11 @@ export default function ProjectsCarrousel() {
       img: "/bolsocheio.webp",
       url: "https://bolsocheio.ai"
     },
-    // {
-    //   description: useTranslation('projects.project2'),
-    //   img: "/timemessages.webp",
-    //   url: "https://timemessages.vercel.app/"
-    // },
+    {
+      description: useTranslation('projects.project2'),
+      img: "/timemessages.webp",
+      url: "https://timemessages.vercel.app/"
+    },
     {
       description: useTranslation('projects.project3'),
       img: "/nossaong.webp",
