@@ -21,7 +21,7 @@ export default function ProjectsCarrousel() {
     {
       description: useTranslation('projects.project3'),
       img: "/nossaong.webp",
-      url: "https://nossaong.com.br/"
+      url: "https://nossaong.org/"
     },
     {
       description: useTranslation('projects.project4'),
