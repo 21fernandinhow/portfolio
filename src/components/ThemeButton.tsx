@@ -4,7 +4,7 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 export default function ThemeButton() {
 
-    const [theme, setTheme] = useState(localStorage.getItem('theme') ? `${localStorage.getItem('theme')}` : 'dark')
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? `${localStorage.getItem('theme')}` : 'light')
 
     const handleTheme = (currentTheme: string) => {
         const userNewTheme = currentTheme === 'dark' ? 'light' : 'dark'
