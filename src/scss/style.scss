@@ -86,6 +86,9 @@ textarea{
     border-radius: 5px;
     box-shadow: 0px 0px 3px rgba(0,0,0, 0.4);
 }
+.zoom-in{
+    animation: zoomIn 1s forwards;
+}
 .reverse-true{
     flex-direction: row-reverse;
 }

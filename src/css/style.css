@@ -35,9 +35,12 @@ main {
   height: 60vh;
   width: 90vw;
   padding: 1.5em;
-  animation: slideIn 1s forwards;
   transform-origin: center;
   opacity: 0;
+}
+
+.page-container {
+  animation: slideIn 1s forwards;
 }
 
 footer, .page-container {
@@ -76,25 +79,29 @@ footer ul li a:hover .tooltip {
   display: inline-block;
 }
 
-.waiting-container {
+.waiting-container, .waiting-container-secondary {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0.5em;
 }
-.waiting-container span {
+.waiting-container span, .waiting-container-secondary span {
   width: 0.4em;
   height: 0.4em;
   border-radius: 100%;
-  background-color: var(--bg-color);
+  background-color: var(--contrast-color);
   margin: 0 3px;
   animation: loading 1s infinite;
 }
-.waiting-container span:nth-child(2) {
+.waiting-container span:nth-child(2), .waiting-container-secondary span:nth-child(2) {
   animation-delay: 0.1s;
 }
-.waiting-container span:nth-child(3) {
+.waiting-container span:nth-child(3), .waiting-container-secondary span:nth-child(3) {
   animation-delay: 0.2s;
+}
+
+.waiting-container-secondary span {
+  background-color: var(--bg-color);
 }
 
 @media (min-width: 769px) {
@@ -152,9 +159,6 @@ footer ul li a:hover .tooltip {
   100% {
     transform: scale(1);
   }
-}
-#home {
-  animation: zoomIn 1s forwards;
 }
 #home .border {
   border-radius: 100%;
@@ -342,12 +346,12 @@ footer ul li a:hover .tooltip {
 }
 
 :root {
-  --bg-color: #222831;
-  --primary-color: #31363F;
+  --bg-color: #f5f5f7;
+  --primary-color: #fff;
   --gradient-first-color: #8c52ff;
   --gradient-second-color: #5ce1e6;
-  --contrast-color: #f5f5f7;
-  --shine-color: rgba(255,255,255, 0.4);
+  --contrast-color: #222831;
+  --shine-color: rgba(0,0,0, 0.4);
 }
 
 .flex-central, body, header .icons, main, #home .border, #projects .carousel, #contact form, #charlie .user-input {
@@ -424,6 +428,10 @@ textarea {
   padding: 5px;
   border-radius: 5px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.zoom-in, #home {
+  animation: zoomIn 1s forwards;
 }
 
 .reverse-true {

@@ -41,9 +41,12 @@ main{
     height: 60vh;
     width: 90vw;
     padding: 1.5em;
-    animation: slideIn 1s forwards;
     transform-origin: center;
     opacity: 0;
+}
+
+.page-container{
+    animation: slideIn 1s forwards;
 }
 
 footer, .page-container{
@@ -92,7 +95,7 @@ footer{
       width: 0.4em;
       height: 0.4em;
       border-radius: 100%;
-      background-color: var(--bg-color);
+      background-color: var(--contrast-color);
       margin: 0 3px;
       animation: loading 1s infinite;
   
@@ -103,5 +106,12 @@ footer{
       &:nth-child(3) {
         animation-delay: 0.2s;
       }
+    }
+}
+
+.waiting-container-secondary {
+    @extend .waiting-container;
+    span{
+        background-color: var(--bg-color);
     }
 }

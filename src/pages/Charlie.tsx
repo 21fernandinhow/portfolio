@@ -1,4 +1,4 @@
-import WaitingAnimation from "../components/WaitingMessage";
+import WaitingAnimation from "../components/WaitingAnimation";
 import { useTranslation } from "../translations/Translate"
 import { useEffect, useRef, useState } from "react"
 
@@ -102,7 +102,7 @@ export default function Charlie() {
                     value={userInputText}
                 />
                 <button onClick={sendMessageToAI} disabled={isWaitingAnswer}>
-                    {isWaitingAnswer ? <WaitingAnimation/> : useTranslation("contact.send")}
+                    {isWaitingAnswer ? <WaitingAnimation secondary/> : useTranslation("contact.send")}
                 </button>
             </div>
         </main>

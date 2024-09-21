@@ -1,5 +1,5 @@
 #home{
-    animation: zoomIn 1s forwards;
+    @extend .zoom-in;
     .border{
         border-radius: 100%;
         background-color: var(--primary-color);
