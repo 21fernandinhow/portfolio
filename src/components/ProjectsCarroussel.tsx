@@ -26,7 +26,7 @@ export default function ProjectsCarrousel() {
     {
       description: useTranslation('projects.project4'),
       img: "/worldcup.webp",
-      url: "https://quantofaltapracopa.netlify.app/"
+      url: "https://quantofaltaparacopa.com.br/"
     }
   ]
 
