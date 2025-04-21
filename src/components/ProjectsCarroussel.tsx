@@ -10,21 +10,31 @@ export default function ProjectsCarrousel() {
   const projects = [
     {
       description: useTranslation('projects.project1'),
+      img: "/tudoaqui.webp",
+      url: "https://tudoaqui.click"
+    },
+    {
+      description: useTranslation('projects.project2'),
       img: "/bolsocheio.webp",
       url: "https://bolsocheio.ai"
     },
     {
-      description: useTranslation('projects.project2'),
+      description: useTranslation('projects.project3'),
+      img: "/byteclass.webp",
+      url: "https://byteclass.dev"
+    },
+    {
+      description: useTranslation('projects.project4'),
       img: "/timemessages.webp",
       url: "https://timemessages.vercel.app/"
     },
     {
-      description: useTranslation('projects.project3'),
+      description: useTranslation('projects.project5'),
       img: "/nossaong.webp",
       url: "https://nossaong.org/"
     },
     {
-      description: useTranslation('projects.project4'),
+      description: useTranslation('projects.project6'),
       img: "/worldcup.webp",
       url: "https://quantofaltaparacopa.com.br/"
     }
